@@ -34,7 +34,7 @@ public class BuildinTypeCreatUI : MonoBehaviour
             MouseEnterExitEvent mouseEnterExitEvent = btnTransform.GetComponent<MouseEnterExitEvent>();
             mouseEnterExitEvent.OnMouseEnter += (object sender, EventArgs e) =>
              {
-                 ToolTipUi.Instance.Show(buildingType.nameString);
+                 ToolTipUi.Instance.Show(buildingType.nameString + "\n" + buildingType.GetToolTipInfor());
              };
             mouseEnterExitEvent.OnMouseExit += (object sender, EventArgs e) =>
             {

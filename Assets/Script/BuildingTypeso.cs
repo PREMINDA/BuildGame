@@ -10,4 +10,15 @@ public class BuildingTypeso : ScriptableObject {
     public ResourceGeneratData resourceGeneratData;
     public Sprite sprite;
     public ResourceAmount[] BuildingResourceCostArray;
+
+    public string GetToolTipInfor()
+    {
+        string str = "";
+        foreach(ResourceAmount resourceAmount in BuildingResourceCostArray)
+        {
+            str += resourceAmount.resourceTypeSo.nameString + " : " + resourceAmount.amount + " ";
+        }
+
+        return str;
+    }
 }
