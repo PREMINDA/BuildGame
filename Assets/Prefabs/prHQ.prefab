@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 2325134751636846094}
   - component: {fileID: 8104423742503919648}
   - component: {fileID: 1246545366586611072}
+  - component: {fileID: -376861387926409207}
   m_Layer: 0
   m_Name: prHQ
   m_TagString: Untagged
@@ -217,3 +218,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-376861387926409207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204158145876807113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60e11be8e4c0cc4cb3ed0d8a683bc53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
