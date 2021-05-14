@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,7 +30,17 @@ public class BuildinTypeCreatUI : MonoBehaviour
             btnTransform.GetComponent<Button>().onClick.AddListener(()=>{
                 BuildingManager.Instance.SetActivebuildintype(buildingType);
             });
-             
+
+            MouseEnterExitEvent mouseEnterExitEvent = btnTransform.GetComponent<MouseEnterExitEvent>();
+            mouseEnterExitEvent.OnMouseEnter += (object sender, EventArgs e) =>
+             {
+                 ToolTipUi.Instance.Show(buildingType.nameString);
+             };
+            mouseEnterExitEvent.OnMouseExit += (object sender, EventArgs e) =>
+            {
+                ToolTipUi.Instance.Hide();
+            };
+
             index++;
         }
     }
