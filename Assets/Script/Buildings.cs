@@ -5,14 +5,25 @@ using UnityEngine;
 public class Buildings : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    private HealthSystem healthSystem;
+
+    private void Start()
     {
-        
+        healthSystem = GetComponent<HealthSystem>();
+        healthSystem.OnDide += HealthSystem_OnDide;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void HealthSystem_OnDide(object sender, System.EventArgs e)
     {
-        
+        Destroy(this.gameObject);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            healthSystem.Damage(10);
+        }
+    }
+
 }

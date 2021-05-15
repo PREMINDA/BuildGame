@@ -10,7 +10,7 @@ public class RemoveBuilding : MonoBehaviour
     private Sprite outline;
     void Start()
     {
-        Debug.Log(this.gameObject.GetComponent<Sprite>()) ;
+        this.gameObject.GetComponent<Sprite>();
     }
 
     // Update is called once per frame
