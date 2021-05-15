@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8104423742503919648}
   - component: {fileID: 1246545366586611072}
   - component: {fileID: -376861387926409207}
+  - component: {fileID: -2431355811368051795}
   m_Layer: 0
   m_Name: prHQ
   m_TagString: Untagged
@@ -228,5 +229,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a60e11be8e4c0cc4cb3ed0d8a683bc53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healtAmountMax: 0
+--- !u!114 &-2431355811368051795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204158145876807113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04109d809290bbe44a4628f640fa1580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -36,10 +36,12 @@ public class BuildingGhost : MonoBehaviour
         if (BuildingManager.Instance.canspawn == false)
         {
             spriteGameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0,0.5f);
+            ToolTipUi.Instance.Show("Need More Space");
         }
         else
         {
             spriteGameObject.GetComponent<SpriteRenderer>().color = new Color(255,255,255,0.5f);
+            ToolTipUi.Instance.Hide();
         }
     }
 
