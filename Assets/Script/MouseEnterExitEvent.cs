@@ -12,11 +12,13 @@ public class MouseEnterExitEvent : MonoBehaviour,IPointerEnterHandler,IPointerEx
     public void OnPointerEnter(PointerEventData eventData)
     {
         OnMouseEnter?.Invoke(this, EventArgs.Empty);
+        
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         OnMouseExit?.Invoke(this, EventArgs.Empty);
+        
     }
 
    

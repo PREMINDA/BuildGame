@@ -23,6 +23,7 @@ public class CameraHandler : MonoBehaviour
     {
         HandleMovement();
         HandleZoom();
+        
     }
     private void HandleMovement()
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BuildingGhost : MonoBehaviour
 {
     private GameObject spriteGameObject;
+    private bool shouldShow = true ;
     
 
     private void Awake()
@@ -37,11 +38,17 @@ public class BuildingGhost : MonoBehaviour
         {
             spriteGameObject.GetComponent<SpriteRenderer>().color = new Color(255, 0, 0,0.5f);
             ToolTipUi.Instance.Show("Need More Space");
+            shouldShow = false;
         }
         else
         {
             spriteGameObject.GetComponent<SpriteRenderer>().color = new Color(255,255,255,0.5f);
-            ToolTipUi.Instance.Hide();
+            if(shouldShow == false)
+            {
+                ToolTipUi.Instance.Hide();
+                shouldShow = true;
+            }
+            
         }
     }
 
