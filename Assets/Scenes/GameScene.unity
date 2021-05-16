@@ -685,7 +685,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.00001
+  orthographic size: 30
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -709,7 +709,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.471714, y: -1.6305982, z: -270.558}
+  m_LocalPosition: {x: -39.471714, y: -1.7442342, z: -270.558}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2267,7 +2267,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1177186626}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 10.00001
+    OrthographicSize: 30
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -2288,7 +2288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357327510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.471714, y: -1.6305982, z: -270.558}
+  m_LocalPosition: {x: -39.471714, y: -1.7442342, z: -270.558}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 48776717}
@@ -3068,6 +3068,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1816508689 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4466668066856187128, guid: d6a720a1ae0e82d4cbb335ec89c56731,
+    type: 3}
+  m_PrefabInstance: {fileID: 1380047117}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1848917635
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,7 +3771,7 @@ PrefabInstance:
     - target: {fileID: 3076428137180456190, guid: 8dd5b9886624e0a499c22d83e4b1cdff,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.98
+      value: -25.08
       objectReference: {fileID: 0}
     - target: {fileID: 3076428137180456190, guid: 8dd5b9886624e0a499c22d83e4b1cdff,
         type: 3}
@@ -3832,3 +3838,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5473a6f329a1fe84db78521f1ce81f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transformHq: {fileID: 1816508689}

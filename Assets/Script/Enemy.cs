@@ -17,4 +17,14 @@ public class Enemy : MonoBehaviour
         Vector3 ang = (transformHq.position - transform.position).normalized;
         rigidbody2d.velocity = ang * speed;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Buildings buildings = collision.gameObject.GetComponent<Buildings>();
+        if(buildings != null)
+        {
+            HealthSystem healthSystem = buildings.GetComponent<HealthSystem>();
+            healthSystem.Damage(50);
+            Destroy(this.gameObject);
+        }
+    }
 }
