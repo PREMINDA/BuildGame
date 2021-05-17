@@ -8,20 +8,31 @@ public class Enemy : MonoBehaviour
     private Transform targetTransform;
     private Rigidbody2D rigidbody2d;
     private float speed = 6f;
+
+    private float maxTime = 0.2f;
+    private float timer;
+      
  
     private void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         targetTransform = transformHq;
+        timer = maxTime;
     }
 
     void Update()
     {
-        Vector3 ang = (transformHq.position - transform.position).normalized;
+        Vector3 ang = (targetTransform.position - transform.position).normalized;
         rigidbody2d.velocity = ang * speed;
+        Debug.Log("................." + targetTransform);
         LookForNewTarget();
 
-
+        timer -= Time.deltaTime;
+        if (timer < 0)
+        {
+            timer = maxTime;
+            LookForNewTarget();
+        }
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -53,14 +64,20 @@ public class Enemy : MonoBehaviour
                 }
                 else
                 {
-                    if(Vector3.Distance(transform.position,buildings.transform.position)
+                    if (Vector3.Distance(transform.position, buildings.transform.position)
                         < Vector3.Distance(transform.position, transformHq.position))
                     {
                         targetTransform = buildings.transform;
+                        Debug.Log(buildings.transform + "      " + targetTransform);
                     }
                 }
+                
             }
-            
+            }
+        if (collider2DArray.Length == 0)
+        {
+            targetTransform = transformHq;
+
         }
     }
 }
