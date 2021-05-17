@@ -7,13 +7,17 @@ public class HealthSystem : MonoBehaviour
 {
     public event EventHandler OnDamage;
     public event EventHandler OnDide;
-    [SerializeField] private int healtAmountMax;
+    private int healtAmountMax;
     private int healthAmount;
+    private BuildingTypeso buildingTypeso;
 
     private void Awake()
     {
+        buildingTypeso = GetComponent<BuildingTypeHolder>().buildingType;
+        healtAmountMax = buildingTypeso.maxHealthl;
         healthAmount = healtAmountMax;
     }
+
     public void Damage(int damageAmount)
     {
         healthAmount -= damageAmount;
@@ -24,16 +28,20 @@ public class HealthSystem : MonoBehaviour
             OnDide?.Invoke(this,EventArgs.Empty);
         }
     }
+
     public bool IsDead()
     {
         return healthAmount == 0;
     }
+
     public int GetHealthAmount()
     {
         return healthAmount;
     }
+
     public float GetNormalizedHealth(){
 
         return (float)healthAmount / healtAmountMax;
     }
+   
 }

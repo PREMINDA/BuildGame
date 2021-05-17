@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Buildings : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private BuildingTypeso buildingTypeso;
     private HealthSystem healthSystem;
+
+
+    private void Awake()
+    {
+ 
+    }
+
 
     private void Start()
     {
@@ -25,5 +32,6 @@ public class Buildings : MonoBehaviour
             healthSystem.Damage(10);
         }
     }
+    
 
 }

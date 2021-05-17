@@ -16,7 +16,7 @@ public class HealthBar : MonoBehaviour
     private void Start()
     {
         healthSystem.OnDamage += HealthSystem_OnDamage;
-        UpadateBar();
+        
         
     }
 
@@ -28,6 +28,6 @@ public class HealthBar : MonoBehaviour
     private void UpadateBar()
     {
         barTransform.localScale = new Vector3(healthSystem.GetNormalizedHealth(),1,1);
-     
+        
     }
 }

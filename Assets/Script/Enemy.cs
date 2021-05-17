@@ -16,6 +16,10 @@ public class Enemy : MonoBehaviour
     {
         Vector3 ang = (transformHq.position - transform.position).normalized;
         rigidbody2d.velocity = ang * speed;
+        if (transformHq == null) {
+            Destroy(this.gameObject);
+        }
+        Debug.Log(transformHq);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -26,5 +30,6 @@ public class Enemy : MonoBehaviour
             healthSystem.Damage(50);
             Destroy(this.gameObject);
         }
+        
     }
 }

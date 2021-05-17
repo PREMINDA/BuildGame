@@ -10,6 +10,7 @@ public class BuildingTypeso : ScriptableObject {
     public ResourceGeneratData resourceGeneratData;
     public Sprite sprite;
     public ResourceAmount[] BuildingResourceCostArray;
+    public int maxHealthl;
 
     public string GetToolTipInfor()
     {
