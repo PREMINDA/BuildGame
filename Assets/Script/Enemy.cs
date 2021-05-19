@@ -11,6 +11,15 @@ public class Enemy : MonoBehaviour
 
     private float maxTime = 0.2f;
     private float timer;
+
+    public static Enemy Create(Vector3 position)
+    {
+        Transform pfEnemy = Resources.Load<Transform>("pfEnemy");
+        Transform enemytransform = Instantiate(pfEnemy,position,Quaternion.identity);
+
+        Enemy enemy = enemytransform.GetComponent<Enemy>();
+        return enemy;
+    }
       
  
     private void Start()
