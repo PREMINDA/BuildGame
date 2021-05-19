@@ -31,17 +31,9 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        Vector3 ang = (targetTransform.position - transform.position).normalized;
-        rigidbody2d.velocity = ang * speed;
-        Debug.Log("................." + targetTransform);
-        LookForNewTarget();
 
-        timer -= Time.deltaTime;
-        if (timer < 0)
-        {
-            timer = maxTime;
-            LookForNewTarget();
-        }
+        handleMovement();
+        handletarget();
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -66,7 +58,7 @@ public class Enemy : MonoBehaviour
             Buildings buildings = collider2d.GetComponent<Buildings>();
             
             if (buildings != null) {
-                Debug.Log("......................." + buildings);
+                
                 if (targetTransform == null)
                 {
                     targetTransform = buildings.transform;
@@ -87,6 +79,32 @@ public class Enemy : MonoBehaviour
         {
             targetTransform = transformHq;
 
+        }
+    }
+    private void handleMovement()
+    {
+        Vector3 ang = Vector3.zero;
+        if (targetTransform != null)
+        {
+            ang = (targetTransform.position - transform.position).normalized;
+        }
+        else
+        {
+            targetTransform = transformHq;
+        }
+
+        rigidbody2d.velocity = ang * speed;
+        LookForNewTarget();
+
+    }
+    private void handletarget()
+    {
+        timer -= Time.deltaTime;
+
+        if (timer < 0)
+        {
+            timer = maxTime;
+            LookForNewTarget();
         }
     }
 }
