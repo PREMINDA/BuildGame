@@ -69,16 +69,11 @@ public class Enemy : MonoBehaviour
                         < Vector3.Distance(transform.position, transformHq.position))
                     {
                         targetTransform = buildings.transform;
-                        Debug.Log(buildings.transform + "      " + targetTransform);
+
                     }
                 }
                 
             }
-            }
-        if (collider2DArray.Length == 0)
-        {
-            targetTransform = transformHq;
-
         }
     }
     private void handleMovement()

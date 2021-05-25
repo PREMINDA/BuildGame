@@ -42,7 +42,7 @@ public class ResourceManager : MonoBehaviour
 
     public bool CanAfford(ResourceAmount[] resourceAmountsArray)
     {
-        Debug.Log(resourceAmountsArray.Length);
+
         foreach (ResourceAmount resourceAmount in resourceAmountsArray)
         {
             

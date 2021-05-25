@@ -59,6 +59,11 @@ public class BuildingManager : MonoBehaviour
 
             }
         }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Vector3 enemyspawnpostion = UtilsClass.GetMousePostition() + UtilsClass.GetrandomDir() * 3f;
+            Enemy.Create(enemyspawnpostion);
+        }
     }
 
     public void SetActivebuildintype(BuildingTypeso buildintype)
